@@ -21,26 +21,65 @@
     </div>
     <div id="profil" class="page">
        <h2 class="titrePage">A propos de moi</h2>
-        <p>Étudiant de 18 ans à la coding Factory by ESIEE-IT en formation Bachelor Développeur de Solution Numérique et Sécurisé</p>
-        <p>j'aime la techno blablablaaaaaaaaaaaaaaaaaaaaaaaaazazsdfcfdsvqwvqsdvw dqsxv sqdvsdv</p>
-        <p>toujours la meme chose eozjfdosiknvjdqksnvoidsvnuksdhnvujzkl</p>
+        <p>Bienvenue sur mon portfolio !</p>
+        <p>Étudiant de 18 ans à la Coding Factory by ESIEE-IT en formation Bachelor Développeur de Solution Numérique et Sécurisée, je développe mes compétences en HTML/CSS, PHP, JavaScript et bien d'autres.</p>
+        <p>J'aime la technologie depuis que je suis au collège lorsque je me suis intéressé à la technologie embarquée dans le domaine de l'automobile. J'ai ensuite découvert le code au lycée avec des technologies telles que Python ou MySQL.</p>
+        <p>Je souhaite ainsi aujourd'hui poursuivre mon parcours professionnel dans le domaine du développement web. C'est dans cet objectif et dans le cadre de mes études que je suis à la recherche d'un stage qui pourra éventuellement mener à une alternance.</p>
     </div>
     <div id="competence" class="page">
         <h2 class="titrePage">competence</h2>
-        <div id="texteProfil">
-            <p></p>
-        </div>
         <div id="divImageCv">
             <img id="imageCv" src="./image/samuel.png">
             <a href="./image/samuel.png" download="Samuel_Galliani-Royer_CV.png"></a>
             <input type="button" value="télécharger">
         </div>
-
-
     </div>
     <div id="portfolio" class="page">
         <h2 class="titrePage">Portfolio</h2>
+        <div id="parentProjet">
+            <div id="memory" class="projet">
+                <p>Site de memory</p>
+                <img id="memoryImage" class="projetImage" src="./image/memory.png">
+                <button class="openOverlay">Voir plus</button>
+            </div>
+            <div id="projetPortfolio" class="projet">
+                <p>Portfolio</p>
+                <img id="PortfolioImage" class="projetImage" src="./image/portfolio.png">
+                <button class="openOverlay">Voir plus</button>
+            </div>
+
+        </div>
     </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <button id="closeOverlay" class="button-close">Fermer</button>
+            <h2 class="modal-title">Projet Memory</h2>
+            <p>
+                Les popups sont des fenêtres modales qui apparaissent directement dans la fenêtre courante
+                du navigateur, au-dessus de la page web qui les appelle.
+            </p>
+            <p>
+                Il s'agit de fenêtres qui prennent <strong>le contrôle de la page</strong> tant qu'elles
+                sont affichées.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Overlay 2 -->
+    <div id="overlay2" class="overlay hidden">
+        <div class="overlay-content">
+            <button id="closeOverlay2" class="button-close">Fermer</button>
+            <h2 class="modal-title">Projet Memory</h2>
+            <p>
+            overlay 2
+            </p>
+        </div>
+    </div>
+
+
     <div id="contact" class="page">
         <h2 class="titrePage">Me contacter</h2>
         <div id="mail" class="contacts">samuelgallianiroyer@gmail.com</div>
@@ -50,5 +89,8 @@
 <footer>
     <p>© SAMUEL GALLIANI--ROYER. All rights reserved</p>
 </footer>
+
+<script src="./overlay.js"></script>
+
 </body>
 </html>
