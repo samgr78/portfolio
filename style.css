@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f5f5f5;
+    background-color: #1c1c1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #22252a;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.boutonNav {
+    color: #8aa0e0;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.boutonNav:hover {
+    color: #ffffff;
+}
+.boutonNav:active{
+    transform: scale(0.8);
+}
+
+.page {
+    padding: 50px 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #8aa0e0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+.titrePage {
+    font-size: 2.5rem;
+    color: #8aa0e0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#profil p {
+    line-height: 1.6;
+    font-size: 1.2rem;
+    color: #dcdcdc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#competence {
+    text-align: left;
+}
+
+#texteProfil {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #dcdcdc;
+}
+
+#titreListeCompetence {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+#divImageCv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#imageCv {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+input[type="button"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4169e1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #314d91;
+}
+
+#portfolio, #contact {
+    margin-top: 50px;
+}
+
+#portfolio {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#portfolio h2 {
+    grid-column: 1 / -1;
+}
+
+
+footer {
+    background-color: #22252a;
+    color: #8aa0e0;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
