@@ -5,7 +5,7 @@
     <title>Portfolio de Samuel Galliani-Royer</title>
     <link href="style.css" rel="stylesheet">
 </head>
-<body>
+<body class="parallax">
 
     <nav>
     <a class="boutonNav" href="#profil">profil</a>
@@ -14,8 +14,18 @@
     <a class="boutonNav" href="#contact">contactez moi</a>
     </nav>
 
+
+    <div class="rechercheStage">
+        <div id="rechercheAlternance">
+            <p class="cursor typewriter-animation">
+                je suis a la recherche d'un stage de 2 a 3 mois
+            </p>
+        </div>
+    </div>
+
+
     <div id="acceuil" class="page">
-        <h1>Samuel Galliani-Royer</h1>
+        <h1 class="title">Samuel Galliani-Royer</h1>
         <h2>Etudiant developpeur web</h2>
         <img src="./image/photo.png">
     </div>
@@ -30,8 +40,8 @@
         <h2 class="titrePage">competence</h2>
         <div id="divImageCv">
             <img id="imageCv" src="./image/samuel.png">
-            <a href="./image/samuel.png" download="Samuel_Galliani-Royer_CV.png"></a>
-            <input type="button" value="télécharger">
+            <a href="./image/samuel-1.pdf" download="Samuel_Galliani-Royer_CV.png"></a>
+            <button class="button" onclick="downloadCV()">Telecharger</button>
         </div>
     </div>
     <div id="portfolio" class="page">
@@ -67,7 +77,6 @@
         </div>
     </div>
 
-
     <!-- Overlay 2 -->
     <div id="overlay2" class="overlay hidden">
         <div class="overlay-content">
@@ -79,18 +88,22 @@
         </div>
     </div>
 
-
     <div id="contact" class="page">
         <h2 class="titrePage">Me contacter</h2>
         <div id="mail" class="contacts">samuelgallianiroyer@gmail.com</div>
         <div id="tel" class="contacts">07 88 44 74 64</div>
-        <div id="github" class="contacts">github.com/samgr78</div>
+        <div>
+            <a id="linkedin" class="contacts" href="https://www.linkedin.com/in/samuel-galliani-royer-13968b342>">www.linkedin.com/in/samuel-galliani-royer-13968b342</a>
+        </div>
+        <div>
+            <a id="github" class="contacts" href="https://github.com/samgr78">github.com/samgr78</a>
+        </div>
     </div>
 <footer>
     <p>© SAMUEL GALLIANI--ROYER. All rights reserved</p>
 </footer>
 
 <script src="./overlay.js"></script>
-
+<script src="./function.js"></script>
 </body>
 </html>

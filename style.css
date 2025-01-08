@@ -1,11 +1,83 @@
+@font-face {
+    font-family: 'GameOfSquids';
+    src: url('/game_of_squids.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'mondaySans';
+    src: url('/MondaySans.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'briston';
+    src: url('/briston.ttf') format('woff2');
+}
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+}
+
+.rechercheStage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+/* Cursor */
+.cursor {
+    position: relative;
+    width: 24em;
+    margin: 5em;
+    padding: 5px;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    color: white;
+    background-color: black;
+    font-style: italic;
+}
+/* Animation */
+.typewriter-animation {
+    animation:
+            typewriter 5s steps(50) 0.01s 1 normal both,
+            blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 67.5%; }
+}
+@keyframes blinkingCursor{
+    from { border-right-color: rgba(255,255,255,.75); }
+    to { border-right-color: transparent; }
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("./image/imageWatchDogs.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'mondaySans', sans-serif;
     margin: 0;
     padding: 0;
     color: #f5f5f5;
@@ -13,11 +85,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    scroll-behavior: smooth;
 }
-html{
-    scroll-behavior: smooth;
-}
+
 
 nav {
     display: flex;
@@ -40,6 +109,7 @@ nav {
     font-weight: bold;
     transition: color 0.3s ease-in-out;
     text-transform: uppercase;
+    font-family: 'briston', sans-serif;
 
 }
 
@@ -51,23 +121,27 @@ nav {
 }
 
 .page {
-    padding: 50px 20px;
-    width: 80%;
-    max-width: 1200px;
-    margin: 100px auto;
+    padding: 40px 20px;
+    width: 100%;
+    margin: 100px ;
     text-align: center;
+    background-color: #1c1c1e;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 h1 {
     font-size: 3rem;
     color: #8aa0e0;
     margin-bottom: 10px;
+    font-family: 'briston', sans-serif;
 }
 
 h2 {
     font-size: 2rem;
     color: #f5f5f5;
     margin-bottom: 20px;
+    font-family: 'briston', sans-serif;
 }
 
 .titrePage {
@@ -76,6 +150,7 @@ h2 {
     margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family: 'briston', sans-serif;
 }
 
 #profil p {
@@ -114,7 +189,7 @@ h2 {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-input[type="button"] {
+.button {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
@@ -122,11 +197,14 @@ input[type="button"] {
     background-color: #4169e1;
     border: none;
     border-radius: 5px;
+    text-decoration: none;
     cursor: pointer;
+    display: inline-block;
+    text-align: center;
     transition: background-color 0.3s ease;
 }
 
-input[type="button"]:hover {
+.button:hover {
     background-color: #314d91;
 }
 
@@ -143,6 +221,7 @@ input[type="button"]:hover {
 #parentProjet {
     display: flex;
     flex-direction: row;
+
 }
 
 #memory{
@@ -151,7 +230,13 @@ input[type="button"]:hover {
 
 #projetPortfolio{
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
 }
+
 
 #portfolio h2 {
     grid-column: 1 / -1;
@@ -227,6 +312,12 @@ input[type="button"]:hover {
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     border: 1px solid lightgray;
+}
+
+.contact {
+    display: flex;
+    text-align: center;
+    margin:10px;
 }
 
 footer {
