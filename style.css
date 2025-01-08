@@ -39,6 +39,8 @@ nav {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
+    text-transform: uppercase;
+
 }
 
 .boutonNav:hover {
